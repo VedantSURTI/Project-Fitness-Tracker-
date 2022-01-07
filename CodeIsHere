@@ -38,50 +38,103 @@ Ice_Cream = {"Cookies and Cream":[13,39.5,6.5,0,0,97.5,6.5],"Strawberry Ice Crea
 Vegeterian_Main_Course_consumed = {}
 Non_Vegeterian_Main_Course_consumed = {}
 Pizza_consumed = {}
+Fruits_consumed = {}
 Snacks_comsumed = {}
 Beverages_consumed = {}
-Fruits_consumed = {}
 Ice_Cream_consumed = {}
 food_consumed = {}
 while user_satisfy==0:
-  menu()
-  food_type = input("ENTER THE NUMBER CORRESPONDING TO FOOD ITEM YOU WANT TO ADD:")
-  print("")
-  if food_type=="1" or food_type=="V" or food_type=="v":
-    food_items = list(Vegeterian_Main_Course.keys())
-    print("LIST OF THE VEGETERIAN MAIN COURSE FOOD YOU MIGHT EAT:")
-    str1 = ""
-    for ele in food_items:
-      str1 = str1 + ele + ","
-    print(str1[:-2])
-    loop = "ENTER THE NUMBER OF VEGETERIAN MAIN COURSE ITEM YOU CONSUME:"
+    menu()
+    food_type = input("ENTER THE NUMBER CORRESPONDING TO FOOD ITEM YOU WANT TO ADD:")
     print("")
-    for i in range(loop):
-      for l in range(food_items):
-        print(l,food_items[l])
-      a = int(input("ENTER THE NUMBER CORRESPONDING TO THE VEGETERIAN MAIN COURSE FOOD ITEM:"))
-      b = int(input("ENTER NUMBER OF SERVINGS YOU TAKE:"))
-      print("")
-      c = Vegeterian_Main_Course[food_items[a]]
-      Vegeterian_Main_Course_counsumed[food_items[a]] = b
-      food_counsumed[food_items[a]] = b
-      fats += c[0]*b
-      carbohydrates += c[1]*b
-      protein += c[2]*b
-      vitaminA += c[3]*b
-      vitaminC += c[4]*b
-      calcium += c[5]*b
-      cholestrol += c[6]*b
-      food_items.pop(a)
+    if food_type=="1" or food_type=="V" or food_type=="v":
+        food_items = list(Vegeterian_Main_Course.keys())
+        print("LIST OF THE VEGETERIAN MAIN COURSE FOOD YOU MIGHT EAT:")
+        str1 = ""
+        for ele in food_items:
+            str1 = str1 + ele + ","
+        print(str1[:-2])
+        loop = "ENTER THE NUMBER OF VEGETERIAN MAIN COURSE ITEM YOU CONSUME:"
+        print("")
+        for i in range(loop):
+            for l in range(food_items):
+            print(l,food_items[l])
+        a = int(input("ENTER THE NUMBER CORRESPONDING TO THE VEGETERIAN MAIN COURSE FOOD ITEM:"))
+        b = int(input("ENTER NUMBER OF SERVINGS YOU TAKE:"))
+        print("")
+        c = Vegeterian_Main_Course[food_items[a]]
+        Vegeterian_Main_Course_counsumed[food_items[a]] = b
+        food_counsumed[food_items[a]] = b
+        fats += c[0]*b
+        carbohydrates += c[1]*b
+        protein += c[2]*b
+        vitaminA += c[3]*b
+        vitaminC += c[4]*b
+        calcium += c[5]*b
+        cholestrol += c[6]*b
+        food_items.pop(a)
+    if food_type=="2" or food_type=="N" or food_type=="n":
+        food_items = list(Non_Vegeterian_Main_Course.keys())
+        print("LIST OF THE NON VEGETERIAN MAIN COURSE FOOD YOU MIGHT EAT:")
+        str1 = ""
+        for ele in food_items:
+            str1 = str1 + ele + ","
+        print(str1[:-2])
+        loop = "ENTER THE NUMBER OF NON VEGETERIAN MAIN COURSE ITEM YOU CONSUME:"
+        print("")
+        for i in range(loop):
+            for l in range(food_items):
+            print(l,food_items[l])
+        a = int(input("ENTER THE NUMBER CORRESPONDING TO THE NON VEGETERIAN MAIN COURSE FOOD ITEM:"))
+        b = int(input("ENTER NUMBER OF SERVINGS YOU TAKE:"))
+        print("")
+        c = Non_Vegeterian_Main_Course[food_items[a]]
+        Non_Vegeterian_Main_Course_counsumed[food_items[a]] = b
+        food_counsumed[food_items[a]] = b
+        fats += c[0]*b
+        carbohydrates += c[1]*b
+        protein += c[2]*b
+        vitaminA += c[3]*b
+        vitaminC += c[4]*b
+        calcium += c[5]*b
+        cholestrol += c[6]*b
+        food_items.pop(a)
+    if food_type=="3" or food_type=="P" or food_type=="p":
+        food_items = list(Pizza.keys())
+        print("LIST OF THE VEGETERIAN MAIN COURSE FOOD YOU MIGHT EAT:")
+        str1 = ""
+        for ele in food_items:
+            str1 = str1 + ele + ","
+        print(str1[:-2])
+        loop = "ENTER THE NUMBER OF VEGETERIAN MAIN COURSE ITEM YOU CONSUME:"
+        print("")
+        for i in range(loop):
+            for l in range(food_items):
+            print(l,food_items[l])
+        a = int(input("ENTER THE NUMBER CORRESPONDING TO THE PIZZA:"))
+        b = int(input("ENTER NUMBER OF SERVINGS YOU TAKE:"))
+        print("")
+        c = Pizza[food_items[a]]
+        Pizza_consumed[food_items[a]] = b
+        food_counsumed[food_items[a]] = b
+        fats += c[0]*b
+        carbohydrates += c[1]*b
+        protein += c[2]*b
+        vitaminA += c[3]*b
+        vitaminC += c[4]*b
+        calcium += c[5]*b
+        cholestrol += c[6]*b
+        food_items.pop(a)
+    
+        
       
       
-      
 
 
 
 
 
-
+ 
 
 
 
