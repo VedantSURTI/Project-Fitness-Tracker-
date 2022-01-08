@@ -283,7 +283,7 @@ while user_satisfy==0:
               food_name.append(ele)
               food_value.append(food_counsumed[ele])
         food_list = pd.DataFrame(food_value,index=food_name)
-        food_list.columns=["SERVING/COUNT"]
+        food_list.columns=[" SERVING"]
         print(food_list)
         print("")
         print("TO CONTINUE ENTERING ITEMS PRESS C")
@@ -302,7 +302,6 @@ gram_value.append(protein*1)
 gram_value.append(vitaminA*1)
 gram_value.append(vitaminC*1)
 gram_value.append(calcium*1)
-gram_value.append(carbohydrates*1)
 gram_value.append(cholestrol*1)
 gram_values = np.array(gram_value)
 
@@ -633,6 +632,15 @@ elif bmi>34.9 and bmi<=39.9:
 else:
     print("OBESE CLASS 3")
 water_report()
+print("")
+print("CALORIES REPORT")
+print("")
+print("YOUR TOTAL CALORIES ARE : ",total_calories)
+print("")
+print("YOUR PERCENTAGE OF CALORIES FROM FATS ARE : ",perc_cal_val[0],"%")
+print("YOUR PERCENTAGE OF CALORIES FROM PROTEINS ARE : ",perc_cal_val[1],"%")
+print("YOUR PERCENTAGE OF CALORIES FROM CARBOHYDRATES ARE : ",perc_cal_val[2],"%")
+print("")
 fats_report()
 carbohydrates_report()
 protein_report()
