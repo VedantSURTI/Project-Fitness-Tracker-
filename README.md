@@ -2,7 +2,7 @@
 
 Our idea is to make a program which takes the user's gender and food items consume during the whole day as input and show them the nutrients in which their diet is deficient or rich in and also give suggestions for the same.
 
-Our project aims to give the user an effortless way through which they can evaluate and improve their diet.
+Our project aims for a healthier society by giving the user an effortless way through which they can evaluate and improve their diet.
 
 Contributors: 
 
