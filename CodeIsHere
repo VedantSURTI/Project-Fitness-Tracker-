@@ -263,10 +263,39 @@ while user_satisfy==0:
             vitaminC += c[4]*b
             calcium += c[5]*b
             cholestrol += c[6]*b
-            food_items.pop(a) 
-      
-      
-
+            food_items.pop(a)
+      response_menu()
+      responce = input("ENTER YOUR CHOICE : ")
+      print("")
+      if responce == "v" or responce == "V":
+          print(food_counsumed)
+          print("")
+          print("TO CONTINUE ENTERING ITEMS PRESS C")
+          print("TO VIEW YOUR REPORTS PRESS R")
+          print("")
+          responce = input("ENTER YOUR CHOICE : ")
+      if responce == "r" or responce == "R":
+          user_satisfy += 1
+calvalue = []
+calvalue.append(fats*1)
+calvalue.append(carbohydrates*1)
+calvalue.append(protein*1)
+calvalue.append(vitaminA*1)
+calvalue.append(vitaminC*1)
+calvalue.append(calcuim*1)
+calvalue.append(carbohydrates*1)
+calvalue.append(cholestrol*1)
+calvalues = np.array(calvalue)
+total_cal_value = np.sum(calvalues)
+perc_calvalue = []
+rec_perc_calvalue_min = []
+rec_perc_calvalue_max = []
+for n in range(len(calvalues)):
+    a = calvalues[n]
+    perc_calvalue.append((a/total_cal_value)*100)
+res_calvalue = []
+for o in range(len(perc_calvalue)):
+    if perc_calvalue[o] >= rec_perc_calvalue
 
 
 
