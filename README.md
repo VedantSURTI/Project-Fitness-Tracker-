@@ -4,7 +4,9 @@ Our idea is to make a program which takes the user's gender and food items consu
 
 Our project aims for a healthier society by giving the user an effortless way through which they can evaluate and improve their diet.
 
-Contributors: 
+Language used : Python 
+
+Contributors : 
 
 1. https://github.com/TripleStarCodeHunter
 2. https://github.com/NABM23
