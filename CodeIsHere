@@ -264,40 +264,262 @@ while user_satisfy==0:
             calcium += c[5]*b
             cholestrol += c[6]*b
             food_items.pop(a)
-      response_menu()
-      responce = input("ENTER YOUR CHOICE : ")
-      print("")
-      if responce == "v" or responce == "V":
+    response_menu()
+    responce = input("ENTER YOUR CHOICE : ")
+    print("")
+    if responce == "v" or responce == "V":
           print(food_counsumed)
           print("")
           print("TO CONTINUE ENTERING ITEMS PRESS C")
           print("TO VIEW YOUR REPORTS PRESS R")
           print("")
           responce = input("ENTER YOUR CHOICE : ")
-      if responce == "r" or responce == "R":
+    if responce == "r" or responce == "R":
           user_satisfy += 1
-calvalue = []
-calvalue.append(fats*1)
-calvalue.append(carbohydrates*1)
-calvalue.append(protein*1)
-calvalue.append(vitaminA*1)
-calvalue.append(vitaminC*1)
-calvalue.append(calcuim*1)
-calvalue.append(carbohydrates*1)
-calvalue.append(cholestrol*1)
-calvalues = np.array(calvalue)
-total_cal_value = np.sum(calvalues)
-perc_calvalue = []
-rec_perc_calvalue_min = []
-rec_perc_calvalue_max = []
-for n in range(len(calvalues)):
-    a = calvalues[n]
-    perc_calvalue.append((a/total_cal_value)*100)
-res_calvalue = []
-for o in range(len(perc_calvalue)):
-    if perc_calvalue[o] >= rec_perc_calvalue
+gram_value = []
+gram_value.append(fats*1)
+gram_value.append(carbohydrates*1)
+gram_value.append(protein*1)
+gram_value.append(vitaminA*1)
+gram_value.append(vitaminC*1)
+gram_value.append(calcuim*1)
+gram_value.append(carbohydrates*1)
+gram_value.append(cholestrol*1)
+gram_values = np.array(calvalue)
+req_gram_calvalue_min_m = []
+req_gram_calvalue_min_f = []
+req_gram_calvalue_max_m = []
+req_gram_calvalue_max_f = []
+result_gramvalue = []
+
+water = int(input("ENTER NUMBER OF GLASSES(500ml) OF WATER YOU CONSUME IN A DAY : "))
+weight = float(input("PLEASE PROVIDE US YOUR WEIGHT : "))
+print("")
+print("ALSO PLEASE PROVIDE US YOUR GENDER")
+print("IF YOU ARE MALE TYPE M")
+print("IF YOU ARE FEMALE TYPE F")
+gender = input("ENTER YOUR GENDER : ")
 
 
+def water_report(water*500):
+    if water <= 4000:
+        print("")
+        print("YOUR WATER CONSUMPTION IS VERY LESS")
+        print("")
+    else:
+        print("")
+        print("WATER CONSUMPTION IS PROPER")
+        print("")
+
+
+
+
+
+
+for o in range(len(gram_value)):
+    if gender.upper() == "M":
+        req_gram_calvalue_min = req_gram_calvalue_min_m
+        req_gram_calvalue_max = req_gram_calvalue_max_m
+    else: 
+        req_gram_calvalue_min = req_gram_calvalue_min_f
+        req_gram_calvalue_max = req_gram_calvalue_max_f
+    if gram_value[o] >= req_gram_calvalue_min[o] and gram_value[o] <= req_gram_calvalue_min[o]:
+        result_gramvalue.append(1)
+    elif gram_value[o] < req_gram_calvalue_min[o]:
+        result_gramvalue.append(0)
+    else:
+        result_gramvalue.append(2)
+        
+def fat_report(a = result_gramvalue[0]):
+    if a == 0 and gender.upper() == "F":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 0 and gender.upper() == "M":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 1 and gender.upper() == "F":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 1 and gender.upper() == "M":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 2 and gender.upper() == "F":
+        print("")
+        print("Excess Contain")
+        print("")
+    elif a == 2 and gender.upper() == "M":
+        print("")
+        print("Excess Contain")
+        print("")
+        
+def carbohydrates_report(a = result_gramvalue[1]):
+    if a == 0 and gender.upper() == "F":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 0 and gender.upper() == "M":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 1 and gender.upper() == "F":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 1 and gender.upper() == "M":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 2 and gender.upper() == "F":
+        print("")
+        print("Excess Contain")
+        print("")
+    elif a == 2 and gender.upper() == "M":
+        print("")
+        print("Excess Contain")
+        print("")
+        
+def protein_report(a = result_gramvalue[2]):
+    if a == 0 and gender.upper() == "F":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 0 and gender.upper() == "M":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 1 and gender.upper() == "F":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 1 and gender.upper() == "M":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 2 and gender.upper() == "F":
+        print("")
+        print("Excess Contain")
+        print("")
+    elif a == 2 and gender.upper() == "M":
+        print("")
+        print("Excess Contain")
+        print("")
+
+def vitaminA_report(a = result_gramvalue[3]):
+    if a == 0 and gender.upper() == "F":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 0 and gender.upper() == "M":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 1 and gender.upper() == "F":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 1 and gender.upper() == "M":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 2 and gender.upper() == "F":
+        print("")
+        print("Excess Contain")
+        print("")
+    elif a == 2 and gender.upper() == "M":
+        print("")
+        print("Excess Contain")
+        print("")
+        
+def vitaminC_report(a = result_gramvalue[4]):
+    if a == 0 and gender.upper() == "F":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 0 and gender.upper() == "M":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 1 and gender.upper() == "F":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 1 and gender.upper() == "M":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 2 and gender.upper() == "F":
+        print("")
+        print("Excess Contain")
+        print("")
+    elif a == 2 and gender.upper() == "M":
+        print("")
+        print("Excess Contain")
+        print("")
+        
+def calcium_report(a = result_gramvalue[5]):
+    if a == 0 and gender.upper() == "F":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 0 and gender.upper() == "M":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 1 and gender.upper() == "F":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 1 and gender.upper() == "M":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 2 and gender.upper() == "F":
+        print("")
+        print("Excess Contain")
+        print("")
+    elif a == 2 and gender.upper() == "M":
+        print("")
+        print("Excess Contain")
+        print("")
+        
+def cholestrol_report(a = result_gramvalue[6]):
+    if a == 0 and gender.upper() == "F":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 0 and gender.upper() == "M":
+        print("")
+        print("Low Contain")
+        print("")
+    elif a == 1 and gender.upper() == "F":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 1 and gender.upper() == "M":
+        print("")
+        print("Proper Contain")
+        print("")
+    elif a == 2 and gender.upper() == "F":
+        print("")
+        print("Excess Contain")
+        print("")
+    elif a == 2 and gender.upper() == "M":
+        print("")
+        print("Excess Contain")
+        print("")
+        
+water_report()
+fats_report()
+carbohydrates_report()
+protein_report()
+vitaminA_report()
+vitaminC_report()
+calcium_report()
+cholestrol_report()
 
 
  
