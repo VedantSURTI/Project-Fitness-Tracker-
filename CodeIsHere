@@ -226,7 +226,7 @@ while user_satisfy==0:
             elif food_items[a].upper() == "PAPAYA":
                 b = float(input("ENTER THE NUMBER OF SLICES YOU EAT : "))
             else:
-                b = float(input("ENTER THE NUMBER OF FRUIT OF EAT : "))
+                b = float(input("ENTER THE NUMBER OF FRUIT YOU EAT : "))
             print("")
             c = Fruits[food_items[a]]
             Fruits_consumed[food_items[a]] = b
@@ -291,8 +291,14 @@ while user_satisfy==0:
         print("")
         responce = input("ENTER YOUR CHOICE : ")
     if responce == "d" or responce == "D":
-        Remove = print("Please enter the name of the item you want to remove:")
-        food_items.pop(Remove)
+        n = 0
+        food_item = []
+        for ele in food_counsumed.keys():
+            print(n,ele)
+            food_item.append(ele)
+            n += 1
+        Remove = int(input("Enter the Number corresponding to the item you want to remove : "))
+        food_counsumed.pop(food_item[Remove])
     if responce == "r" or responce == "R":
           user_satisfy += 1
 gram_value = []
@@ -614,11 +620,13 @@ def cholestrol_report(a = result_gramvalue[6]):
 
 
 
-
+print("-------------------------------------------------------------------------------------------------------------")
 print("")
 bmi = (weight)/(height)**2
+print("-----------------------------------------------------")
 print("YOUR BMI REPORT :")
 print("")
+print("YOUR BMI IS : ",bmi)
 if bmi<18.5:
     print("YOU ARE UNDERWEIGHT.")
 elif bmi>=18.5 and bmi<=24.9:
@@ -631,23 +639,51 @@ elif bmi>34.9 and bmi<=39.9:
     print("OBESE CLASS 2")
 else:
     print("OBESE CLASS 3")
+print("-----------------------------------------------------")
+print("")
+print("-----------------------------------------------------")
 water_report()
+print("-----------------------------------------------------")
+print("")
 print("")
 print("CALORIES REPORT")
 print("")
-print("YOUR TOTAL CALORIES ARE : ",total_calories)
+print("YOUR TOTAL CALORIES ARE : ",'%.4f' % total_calories)
 print("")
-print("YOUR PERCENTAGE OF CALORIES FROM FATS ARE : ",perc_cal_val[0],"%")
-print("YOUR PERCENTAGE OF CALORIES FROM PROTEINS ARE : ",perc_cal_val[1],"%")
-print("YOUR PERCENTAGE OF CALORIES FROM CARBOHYDRATES ARE : ",perc_cal_val[2],"%")
+print("YOUR PERCENTAGE OF CALORIES FROM FATS ARE : ",'%.5f' % perc_cal_val[0],"%")
+print("YOUR PERCENTAGE OF CALORIES FROM PROTEINS ARE : ",'%.5f' % perc_cal_val[1],"%")
+print("YOUR PERCENTAGE OF CALORIES FROM CARBOHYDRATES ARE : ",'%.5f' % perc_cal_val[2],"%")
 print("")
-fats_report()
+print("-----------------------------------------------------")
+print("")
+print("-----------------------------------------------------")
+fat_report()
+print("-----------------------------------------------------")
+print("")
+print("-----------------------------------------------------")
 carbohydrates_report()
+print("-----------------------------------------------------")
+print("")
+print("-----------------------------------------------------")
 protein_report()
+print("-----------------------------------------------------")
+print("")
+print("-----------------------------------------------------")
 vitaminA_report()
+print("-----------------------------------------------------")
+print("")
+print("-----------------------------------------------------")
 vitaminC_report()
+print("-----------------------------------------------------")
+print("")
+print("-----------------------------------------------------")
 calcium_report()
+print("-----------------------------------------------------")
+print("")
+print("-----------------------------------------------------")
 cholestrol_report()
+print("-----------------------------------------------------")
+print("-------------------------------------------------------------------------------------------------------------")
 
  
 
