@@ -311,7 +311,8 @@ while user_satisfy==0:
     if responce == "r" or responce == "R":
           user_satisfy += 1
     if responce=="I" or responce=="i":
-        print(Facts_menu())
+        Facts_menu()
+        response_menu()
 gram_value = []
 gram_value.append(fats*1)
 gram_value.append(carbohydrates*1)
