@@ -613,26 +613,7 @@ def cholestrol_report(a = result_gramvalue[6]):
         print("")
 
 
-print("WOULD YOU LIKE TO ANSWER SOME QUESTIONS TO ENCHANCE YOUR DIET : ")
-print("IF YES TYPE Y")
-print("IF NO TYPE N")
-res_que = input("ENTER YOUR CHOICE : ")
-if res_que.upper() == "Y":
-    print("")
-    print("QUESTION 1.")
-    print("WHAT IS YOUR AVERAGE DAILY SCREENTIME?")
-    print("")
-    res_q1 = float(input("ENTER YOUR RESPONSE IN HOURS : "))
-    if res_q1 >= 2:
-        print("YOU SHOULD TRY INTAKING THIS NUTRIENTS")
-    print("")
-    print("QUESTION 2")
-    print("ARE YOU A BODY BUILDER?")
-    print("TYPE Y FOR YES\nTYPE N FOR NO")
-    print("")
-    res_q2 = input("ENTER YOUR CHOICE : ")
-    if res_q2.upper() == "Y":
-        cal_loss = float(input("ENTER THE NUMBER OF AVERAGE CALROIES THAT YOU BURN IN A WORKOUT: "))
+
 
 
 print("")
