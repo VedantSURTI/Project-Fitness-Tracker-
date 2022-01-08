@@ -268,7 +268,8 @@ while user_satisfy==0:
     responce = input("ENTER YOUR CHOICE : ")
     print("")
     if responce == "v" or responce == "V":
-          print(food_counsumed)
+          for ele in food_counsumed.keys():
+              print(ele,food_counsumed[ele])
           print("")
           print("TO CONTINUE ENTERING ITEMS PRESS C")
           print("TO VIEW YOUR REPORTS PRESS R")
@@ -282,7 +283,7 @@ gram_value.append(carbohydrates*1)
 gram_value.append(protein*1)
 gram_value.append(vitaminA*1)
 gram_value.append(vitaminC*1)
-gram_value.append(calcuim*1)
+gram_value.append(calcium*1)
 gram_value.append(carbohydrates*1)
 gram_value.append(cholestrol*1)
 gram_values = np.array(calvalue)
@@ -312,7 +313,7 @@ perc_cal_val = []
 for c in range(len(calories)):
     perc_cal_val.append(calories[c]/total_calories*100)
 
-def water_report(water*500):
+def water_report(water = water*500):
     if water <= 3700 and gender.upper() == "M":
         print("")
         print("YOUR WATER CONSUMPTION IS VERY LESS")
@@ -599,6 +600,31 @@ vitaminA_report()
 vitaminC_report()
 calcium_report()
 cholestrol_report()
+
+print("WOULD YOU LIKE TO ANSWER SOME QUESTIONS TO ENCHANCE YOUR DIET : ")
+print("IF YES TYPE Y")
+print("IF NO TYPE N")
+res_que = input("ENTER YOUR CHOICE : ")
+if res_que.upper() == "Y":
+    print("")
+    print("HERE ARE SOME THE QUESTIONS WHICH YOU CAN ANSWER TO DIET : ")
+    print("")
+    print("QUESTION 1.")
+    print("WHAT WOULD BE YOUR AVERAGE DAILY SCREENTIME?")
+    print("")
+    res_q1 = float(input("ENTER YOUR RESPONSE IN HOURS : "))
+    if res_q1 <= 2:
+        print("NO REQUIREMENT OF ADDITIONAL CONSUMPTION")
+    else:
+        print("YOU SHOULD TRY INTAKING THIS NUTRIENTS")
+    print("")
+    print("QUESTION 2")
+    print("ARE YOU INTO BODYBUILING OR WEIGHT LOSS KIND OF STUFF?")
+    print("TYPE Y FOR YES\nTYPE N FOR NO")
+    print("")
+    res_q2 = input("ENTER YOUR CHOICE : ")
+    if res_q2.upper() == "Y":
+        cal_loss = float(input("ENTER AVERAGE CALROIES THAT YOU MIGHT LOSE : "))
 
 
  
