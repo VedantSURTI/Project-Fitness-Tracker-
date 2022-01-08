@@ -290,6 +290,9 @@ while user_satisfy==0:
         print("TO VIEW YOUR REPORTS PRESS R")
         print("")
         responce = input("ENTER YOUR CHOICE : ")
+    if response == "d" or response == "D":
+        Remove = print("Please enter the name of the item you want to remove:")
+        food_items.pop(Remove)
     if responce == "r" or responce == "R":
           user_satisfy += 1
 gram_value = []
