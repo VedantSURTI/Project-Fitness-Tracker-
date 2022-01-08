@@ -683,6 +683,23 @@ print("")
 print("-----------------------------------------------------")
 cholestrol_report()
 print("-----------------------------------------------------")
+def Facts_menu():
+    print("Fats :- The importance of fats for humans, animals, and plants lies in their high content of energy, which permits the greatest possible storage of energy in the smallest possible amount of food substance. Fats allow humans and animals to consume fat-soluble vitamins and provide them with essential fatty acids, that is, those indispensable fatty acids that their bodies are unable to synthesize themselves. The efficiency of fat as foodstuff is very high, because the fat contained in food is almost completely reabsorbed by the body.")
+    print("Proteins :- Protein is essential to building bones,and body tissues, such as muscles, but protein does much more than that. Protein participates in practically every process of a cell. It plays a part in metabolic reactions, immune response, protein provides a source of energy, assists in cellular repair, form blood cells, and more.")
+    print("Carbohydrates : - Carbohydrates are your body's main source of energy: They help fuel your brain, kidneys, heart muscles, and central nervous system. For instance, fiber is a carbohydrate that aids in digestion, helps you feel full, and keeps blood cholesterol levels in check. A carbohydrate-deficient diet may cause headaches, fatigue, weakness, difficulty concentrating, nausea, constipation, bad breath and vitamin and mineral deficiencies.")
+    print("Vitamin A:- Vitamin A is a fat-soluble vitamin that is naturally present in many foods. Vitamin A is important for normal vision, the immune system, and reproduction. Vitamin A also helps the heart, lungs, kidneys, and other organs work properly.")
+    print("Vitamin C :- Vitamin C, also known as ascorbic acid, is necessary for the growth, development and repair of all body tissues. It's involved in many body functions, including formation of collagen, absorption of iron, the proper functioning of the immune system, wound healing, and the maintenance of cartilage, bones, and teeth.")
+    print("Calcium :- Calcium is a mineral your body needs to build and maintain strong bones and to carry out many important functions. Calcium is the most abundant mineral in the body. Your body needs calcium for muscles to move and for nerves to carry messages between your brain and every part of your body. Calcium also helps blood vessels move blood throughout your body and helps release hormones that affect many functions in your body.")
+    print("Cholesterol :- Cholesterol is a waxy substance found in your blood. Your body needs cholesterol to build healthy cells, but high levels of cholesterol can increase your risk of heart disease. With high cholesterol, you can develop fatty deposits in your blood vessels.")
+    
+    
+    
+    
+    
+    print("Do you want to know about the facts of the nutrients your food contains?")
+    a7=input("Enter YES or NO")
+    if a7 == "YES" or a7=="Y" or a7=="y":
+        Facts_menu()
 print("-------------------------------------------------------------------------------------------------------------")
 
  
