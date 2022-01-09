@@ -599,7 +599,7 @@ def calcium_report(a = result_gramvalue[5]):
         print("")
         
 def cholestrol_report(a = result_gramvalue[6]):
-    print("YOUR CHOLESTROL REPORTS ARE HERE : ")
+    print("YOUR CHOLESTEROL REPORTS ARE HERE : ")
     if a == 0 and gender.upper() == "F":
         print("")
         print("Low Contain")
@@ -624,7 +624,7 @@ def cholestrol_report(a = result_gramvalue[6]):
         print("")
     elif a == 2 and gender.upper() == "M":
         print("")
-        print("Your diet contains an excess amount of Choleserol. It would be beneficial if you would decrease them")
+        print("Your diet contains an excess amount of Cholesterol. It would be beneficial if you would decrease them")
         print("")
         print("To decrease your Cholesterol content, decrease the consumption of dishes which include milk and dairy products, meat and eggs")
         print("")
