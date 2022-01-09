@@ -14,6 +14,9 @@ We are planning to make an android,ios and web based application of our program 
 
 Language used : Python 
 
+To view .exe file of our Program :-
+https://drive.google.com/drive/folders/1Knwo3jFzqRTLADBTkcObaldd3BY5MPFh
+
 Contributors : 
 
 1. https://github.com/TripleStarCodeHunter
